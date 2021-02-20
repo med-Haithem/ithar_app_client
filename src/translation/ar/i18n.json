@@ -1,11 +1,28 @@
 {
   "Authentication": {
     "SignIn": {
-      "Username":"اسم المستخدم",
-      "Password":"كلمة المرور",
-      "RememberMe":"البقاء متصلاً",
-      "PageTitle":"تسجيل الدخول"
-        
+      "Email": "البريد الإلكتروني",
+      "Password": "كلمة المرور",
+      "RememberMe": "البقاء متصلاً",
+      "PageTitle": "تسجيل الدخول",
+      "Sign-up-request": "ليس لديك حساب؟",
+      "Sign-up-btn": "سجل الآن"
+    },
+    "SignUp": {
+      "PageTitle": "التسجيل",
+      "Email": "البريد الإلكتروني",
+      "Password": "كلمة المرور",
+      "ConfirmPassword": "تأكيد كلمة المرور",
+      "PhoneNumber": "رقم الهاتف",
+      "Validation": {
+        "RequiredPassword": "كلمة المرور مطلوبة !",
+        "ConfirmPassword": "يرجى التأكد من صحة كلمة المرور !",
+        "UnmatchedPasswords":"كلمتا المرور اللتان أدخلتهما غير متطابقتين!",
+        "RequiredPhoneNumber":"الرجاء إدخال رقم هاتفك!",
+        "RequiredEmail":"الرجاء إدخال البريد الإلكتروني!",
+        "UnvalidEmail":"الإدخال ليس بريدًا إلكترونيًا صالحًا!",
+        "PhoneNumberInvalid":"يرجى إدخال رقم هاتف صالح"
+      }
     }
   }
 }

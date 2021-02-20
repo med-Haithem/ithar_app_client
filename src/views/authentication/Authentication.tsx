@@ -1,14 +1,18 @@
-import { Button, Col, Result, Row } from "antd";
+import { Button, Col, Menu, Result, Row } from "antd";
 import React, { useEffect } from "react";
 import {
+  NavLink,
   Redirect,
   Route,
   Switch,
   useLocation,
   useRouteMatch,
 } from "react-router-dom";
-import { AuthenticationSignIn } from "./components";
+import { LoginOutlined, UserAddOutlined } from "@ant-design/icons";
+
+import { AuthenticationSignIn, AuthenticationSignUp } from "./components";
 export type Props = {};
+const { SubMenu } = Menu;
 
 export const Authentication = (props: Props) => {
   const { pathname } = useLocation(),
@@ -21,12 +25,28 @@ export const Authentication = (props: Props) => {
   return (
     <Row>
       <Col span={24}>
+        <Menu selectedKeys={[pathname]} mode="horizontal" theme="dark">
+          <Menu.Item key={`${path}/sign-in`} icon={<LoginOutlined />}>
+            <NavLink to={"./sign-in"}>تسجيل الدخول</NavLink>
+          </Menu.Item>
+          <Menu.Item key={`${path}/sign-up`} icon={<UserAddOutlined />}>
+            <NavLink to={"./sign-up"}>التسجيل </NavLink>
+          </Menu.Item>
+        </Menu>
         <Switch>
           <Route exact path={`${path}`}>
             <Redirect exact from={`/`} to={`${path}/sign-in`} />
           </Route>
-          <Route exact path={`${path}/sign-in`} component={AuthenticationSignIn} />
-          <Route path={`${path}/sign-up`} component={() => <div></div>} />
+          <Route
+            exact
+            path={`${path}/sign-in`}
+            component={AuthenticationSignIn}
+          />
+          <Route
+            exact
+            path={`${path}/sign-up`}
+            component={AuthenticationSignUp}
+          />
           <Route
             render={(props) => {
               return (

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./index.less";
 import reportWebVitals from "./reportWebVitals";
 import moment from "moment";
 import i18next from "i18next";
