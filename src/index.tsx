@@ -10,10 +10,12 @@ import { Switch, Route, Redirect } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import { Authentication } from "./views/authentication";
 import { App } from "./views";
-
+import { ConfigProvider } from "antd";
+import ar_EG from "antd/lib/locale/ar_EG";
+import "moment/locale/ar";
 
 i18next.init({
-  lng: "",
+  lng: "ar",
   debug: true,
   fallbackLng: "ar",
   interpolation: {
@@ -33,18 +35,26 @@ const MainApp = (props: any) => {
     )}`
   );
   return (
-    <I18nextProvider i18n={i18next}>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Redirect exact from="/" to="/app" />
-          </Route>
-          <Route path="/app" component={App} />
-          <Route path="/authentication" component={Authentication} />
-          <Route component={App} />
-        </Switch>
-      </BrowserRouter>
-    </I18nextProvider>
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
+      <I18nextProvider i18n={i18next}>
+        <ConfigProvider direction={"rtl"} locale={ar_EG}>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/">
+                <Redirect exact from="/" to="/authentication" />
+              </Route>
+              <Route path="/app" component={App} />
+              <Route path="/authentication" component={Authentication} />
+              <Route component={Authentication} />
+            </Switch>
+          </BrowserRouter>
+        </ConfigProvider>
+      </I18nextProvider>
+    </div>
   );
 };
 

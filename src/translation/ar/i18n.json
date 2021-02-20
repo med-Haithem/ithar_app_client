@@ -1,5 +1,11 @@
 {
   "Authentication": {
-    "SignIn": {}
+    "SignIn": {
+      "Username":"اسم المستخدم",
+      "Password":"كلمة المرور",
+      "RememberMe":"البقاء متصلاً",
+      "PageTitle":"تسجيل الدخول"
+        
+    }
   }
 }
