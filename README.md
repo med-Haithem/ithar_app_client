@@ -1,6 +1,5 @@
 ## Preview
-https://cocky-kilby-fb96d1.netlify.app/authentication/sign-in
-
+https://cocky-kilby-fb96d1.netlify.app
 # Use antd in create-react-app ✨
 
 [Create React App](https://facebook.github.io/create-react-app/) + [Ant Design](https://ant.design).
