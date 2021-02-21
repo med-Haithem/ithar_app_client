@@ -52,6 +52,7 @@ export const AuthenticationSignUp = (props: Props) => {
           onFinish={onFinish}
           scrollToFirstError
           layout="horizontal"
+          size="large"
           initialValues={{
             prefix: 216,
           }}
