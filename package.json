@@ -2,7 +2,6 @@
   "name": "create-react-app-antd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cocky-kilby-fb96d1.netlify.app",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.9.0",
